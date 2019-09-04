@@ -49,6 +49,9 @@
                 <action android:name="android.intent.action.PHONE_STATE" />
                 <action android:name="android.provider.MediaStore.RECORD_SOUND" />
                 <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
