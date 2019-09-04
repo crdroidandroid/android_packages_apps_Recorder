@@ -80,7 +80,7 @@
     <!-- Screen recorder notification overlay message -->
     <string name="screen_overlay_notif_message">Press the record button when you\'re ready to start</string>
     <!-- Screen settings dialog title -->
-    <string name="screen_settings_title">Screen recorder settings</string>
+    <string name="screen_settings_title">Screen Recorder</string>
     <!-- Screen recorder notification overlay channel title -->
     <string name="screen_overlay_channel_title">Ready to record screen</string>
     <!-- Screen recorder notification overlay channel description-->

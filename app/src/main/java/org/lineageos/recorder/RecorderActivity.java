@@ -76,8 +76,6 @@ public class RecorderActivity extends AppCompatActivity {
 
     private FloatingActionButton mScreenFab;
     private ImageView mSettingsIcon;
-    private ImageView mSettingsIconIconBottom1;
-    private ImageView mSettingsIconIconBottom2;
 
     private FloatingActionButton mSoundFab;
 
@@ -122,8 +120,6 @@ public class RecorderActivity extends AppCompatActivity {
 
         mScreenFab = findViewById(R.id.screen_fab);
         mSettingsIcon = findViewById(R.id.settings_icon_top);
-        mSettingsIconIconBottom1 = findViewById(R.id.settings_icon_bottom1);
-        mSettingsIconIconBottom2 = findViewById(R.id.settings_icon_bottom2);
 
         mSoundFab = findViewById(R.id.sound_fab);
 
@@ -135,8 +131,6 @@ public class RecorderActivity extends AppCompatActivity {
         mScreenFab.setOnClickListener(v -> toggleScreenRecorder());
         mSoundFab.setOnClickListener(v -> toggleSoundRecorder());
         mSettingsIcon.setOnClickListener(v -> openScreenSettings());
-        mSettingsIconIconBottom1.setOnClickListener(v -> openScreenSettings());
-        mSettingsIconIconBottom2.setOnClickListener(v -> openScreenSettings());
 
         bindSoundRecService();
         mPreferenceUtils = new PreferenceUtils(this);
@@ -340,8 +334,6 @@ public class RecorderActivity extends AppCompatActivity {
                 mScreenFab.setImageResource(R.drawable.ic_stop_screen);
                 set.clone(this, R.layout.constraint_screen);
                 mSettingsIcon.setVisibility(View.GONE);
-                mSettingsIconIconBottom1.setVisibility(View.VISIBLE);
-                mSettingsIconIconBottom2.setVisibility(View.GONE);
             } else {
                 mSoundFab.setImageResource(R.drawable.ic_stop_sound);
                 mRecordingVisualizer.onAudioLevelUpdated(0);
@@ -350,8 +342,6 @@ public class RecorderActivity extends AppCompatActivity {
                 }
                 set.clone(this, R.layout.constraint_sound);
                 mSettingsIcon.setVisibility(View.GONE);
-                mSettingsIconIconBottom1.setVisibility(View.GONE);
-                mSettingsIconIconBottom2.setVisibility(View.VISIBLE);
             }
         } else {
             mScreenFab.setImageResource(R.drawable.ic_action_screen_record);
@@ -361,8 +351,6 @@ public class RecorderActivity extends AppCompatActivity {
             mRecordingVisualizer.setVisibility(View.GONE);
             set.clone(this, R.layout.constraint_default);
             mSettingsIcon.setVisibility(View.VISIBLE);
-            mSettingsIconIconBottom1.setVisibility(View.GONE);
-            mSettingsIconIconBottom2.setVisibility(View.GONE);
             Utils.refreshShowTouchesState(this);
         }
 
