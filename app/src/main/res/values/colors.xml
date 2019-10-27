@@ -25,4 +25,6 @@
     <color name="overlay_icon">#fafafa</color>
     <color name="fab_icon">@color/colorAccent</color>
     <color name="icon">#56000000</color>
+
+    <color name="ic_launcher_color">#F40009</color>
 </resources>
